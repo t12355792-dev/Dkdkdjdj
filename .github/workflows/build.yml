@@ -20,6 +20,9 @@ jobs:
         with:
           gradle-version: '4.10.3'
 
+      - name: Распаковать исходники
+        run: unzip -o galacticaxe-mod-src.zip -x ".github/*"
+
       - name: Build jar
         run: gradle build --no-daemon
         env:
